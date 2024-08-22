@@ -1,2 +1,1 @@
-# My_Tiendita-2.0-esta-vez-es-personal-D
-Un Simple sistema de administracion de tiendas :D
+Recuerde que debe trabajar de manera continua en la creación del código
