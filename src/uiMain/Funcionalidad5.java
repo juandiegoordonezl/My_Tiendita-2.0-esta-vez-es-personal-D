@@ -25,7 +25,7 @@ public class Funcionalidad5 {
 		print("+-----------------------------------+----------+");
 		print("| No.|     Nombre de Tienda        |  Precio  |");
 		print("+-----------------------------------+----------+");
-
+		
 		ArrayList<Tienda> tiendas = Tienda.getTiendas();
 
 		// Filtrar las tiendas que ya tienen dueño
@@ -51,7 +51,8 @@ public class Funcionalidad5 {
 		
 		float diferencia=(float) (admin.getDinero()-tien.getSaldo());
 		if(diferencia>=0) {
-			tien.setDueño(admin);// Asignar la tienda al cliente
+			tien.setDueño(admin);
+			admin.getTiendas().add(tien);// Asignar la tienda al cliente
 			print("Has seleccionado la tienda: " + tien.getNombre());
 			print("Se te resto $"+tien.getSaldo()+" de tu saldo");
 			print("Ahora eres el dueño de la tienda: \""+tien.getNombre()+"\"");
