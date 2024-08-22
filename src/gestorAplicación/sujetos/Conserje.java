@@ -16,6 +16,9 @@ public class Conserje extends Empleado implements Serializable {
 		super(nombre, id, edad, genero, liquidacion, tienda, prestacionSalud, prestacionPension,TipoEmpleado.CONSERJE,experiencia);
 		Tienda.getDesempleados().add(this);
 	}
+	public Conserje() {
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	protected void buscoChamba() {
 		// TODO Auto-generated method stub

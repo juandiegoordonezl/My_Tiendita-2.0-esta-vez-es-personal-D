@@ -1,5 +1,6 @@
 package uiMain;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import baseDatos.Deserializador;
@@ -451,11 +452,100 @@ public class Main extends Identidad{
 //	Carrito car5 = new Carrito(cliente5, false, null, Edades.MENORES);
 //	Tienda t=new Tienda("NIT123456", adm, "Exito", 1000000, "abierto",car1, null, null, null, null, null);
 //	Tienda.getTiendas().add(t);
-//	       
-//	   
+//		Tienda t1 = new Tienda();
+//		Tienda t2= new Tienda();
+//		Tienda t3 = new Tienda();
+//		Tienda t4 = new Tienda();
+//		Tienda t5 = new Tienda();
+//		Tienda t6= new Tienda();
+//		Tienda t7 = new Tienda();
+//		Tienda t8 = new Tienda();
+		Tienda.getTiendas().get(1).setNombre("La Esquina");
+		Tienda.getTiendas().get(2).setNombre("El Rincón");
+		Tienda.getTiendas().get(3).setNombre("La Cima");
+		Tienda.getTiendas().get(4).setNombre("La Nueva");
+		Tienda.getTiendas().get(5).setNombre("El Refugio");
+		Tienda.getTiendas().get(6).setNombre("La Aventura");
+		Tienda.getTiendas().get(7).setNombre("El Paseo");
+		
+		Tienda.getTiendas().get(0).setEstado("abierto");
+		Tienda.getTiendas().get(1).setEstado("cerrado");
+		Tienda.getTiendas().get(2).setEstado("abierto");
+		Tienda.getTiendas().get(3).setEstado("cerrado");
+		Tienda.getTiendas().get(4).setEstado("abierto");
+		Tienda.getTiendas().get(5).setEstado("abierto");
+		Tienda.getTiendas().get(6).setEstado("abierto");
+		Tienda.getTiendas().get(7).setEstado("cerrado");
+		
+		Tienda.getTiendas().get(0).setNit("32112");
+		Tienda.getTiendas().get(1).setNit("65432");
+		Tienda.getTiendas().get(2).setNit("98765");
+		Tienda.getTiendas().get(3).setNit("12345");
+		Tienda.getTiendas().get(4).setNit("67890");
+		Tienda.getTiendas().get(5).setNit("11223");
+		Tienda.getTiendas().get(6).setNit("44556");
+		Tienda.getTiendas().get(7).setNit("77889");
+		
+		Tienda.getTiendas().get(0).setSaldo(100000);
+		Tienda.getTiendas().get(1).setSaldo(102000);
+		Tienda.getTiendas().get(2).setSaldo(98000);
+		Tienda.getTiendas().get(3).setSaldo(99500);
+		Tienda.getTiendas().get(4).setSaldo(101500);
+		Tienda.getTiendas().get(5).setSaldo(100500);
+		Tienda.getTiendas().get(6).setSaldo(98000);
+		Tienda.getTiendas().get(7).setSaldo(99000);
+        
+		for(int i=0;i>8;i++) {
+		Tienda.getTiendas().get(i).setCajas((ArrayList<Caja>) List.of(
+	            new Caja(),
+	            new Caja(),
+	            new Caja()));
+		}
+		
+		for(int i=0;i>5;i++) {
+			Tienda.getTiendas().get(i).setDueño(new Administrador());
+			}
+		for(int i=4;i>8;i++) {
+			Tienda.getTiendas().get(i).setDueño(null);
+			}
+		for(int i=4;i>8;i++) {
+			Tienda.getTiendas().get(i).setCarrito(new Carrito());
+			}
+		for(int i=0;i>8;i++) {
+		Tienda.getTiendas().get(i).setEmpleados((ArrayList<Empleado>) List.of(
+	            new Cajero(),
+	            new Domiciliario(),
+	            new Conserje()));
+		}
+		for(int i=0;i>8;i++) {
+		Tienda.getTiendas().get(i).setFacturas((ArrayList<Carrito>) List.of(
+	            new Carrito(),
+	            new Carrito(),
+	            new Carrito(),
+	            new Carrito()));
+		}
+		for(int i=0;i>8;i++) {
+			Tienda.getTiendas().get(i).setPasillos(((ArrayList<Pasillo>) List.of(
+		           new Pasillo(),
+		           new Pasillo(),
+		           new Pasillo(),
+		           new Pasillo(),
+		           new Pasillo(),
+		           new Pasillo())));
+			}
+//		for(int i=0;i>8;i++) {
+//			Tienda.getTiendas().get(0).set(((ArrayList<Pasillo>) List.of(
+//		           new Pasillo(),
+//		           new Pasillo(),
+//		           new Pasillo(),
+//		           new Pasillo(),
+//		           new Pasillo(),
+//		           new Pasillo()))));
+//			}
 		
 		
-		escogerFuncionalidad();
+	Serializador.serializarTodo();	
+//	escogerFuncionalidad();
 	}
 	
 	public static void escogerFuncionalidad() {

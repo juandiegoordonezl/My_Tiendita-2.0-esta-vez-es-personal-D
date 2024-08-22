@@ -20,6 +20,11 @@ public class Administrador extends Persona implements Serializable {
 	}
 
 
+	public Administrador() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public ArrayList<Tienda> getTiendas() {
 		return tiendas;
 	}

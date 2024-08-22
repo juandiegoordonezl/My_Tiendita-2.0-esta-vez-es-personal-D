@@ -76,6 +76,12 @@ public class Pasillo implements Serializable{
 
 //Metodos------------------------------------------------------------------------------------------------------
 	
+	public Pasillo(Pasillo pasillo) {
+		// TODO Auto-generated constructor stub
+	}
+	public Pasillo() {
+		// TODO Auto-generated constructor stub
+	}
 	public void asignarTienda(Tienda tienda) {
         this.tienda = tienda;
         tienda.getPasillos().add(this);

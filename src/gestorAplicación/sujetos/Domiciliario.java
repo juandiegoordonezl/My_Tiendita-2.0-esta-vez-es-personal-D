@@ -28,6 +28,10 @@ public class Domiciliario extends Empleado implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
+	public Domiciliario() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getVehiculo() {
 		return vehiculo;
 	}

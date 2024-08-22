@@ -165,9 +165,9 @@ public class Tienda implements Serializable{
 	
 //Contructores------------------------------------------------------------------------------------------------
 
-//	public Tienda(){
-//		tiendas.add(this);
-//	}
+	public Tienda(){
+		tiendas.add(this);
+	}
 
 	public Tienda(String nombre) {
 		this.nombre=nombre;
