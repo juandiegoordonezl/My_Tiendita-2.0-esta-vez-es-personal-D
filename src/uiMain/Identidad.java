@@ -68,7 +68,10 @@ public abstract class Identidad {
 			persona = new Cliente(nombre,p,edad,genero1);
 		}
 		else {
-			persona = new Administrador(nombre,p,edad,genero1);
+			lineas();
+			System.out.print("¿Cuanto dinero desea para hacer su administracion?: ");
+			double dinero=escaner();
+			persona = new Administrador(nombre,p,edad,genero1,dinero);
 		}
 		lineas();
 		print("");
