@@ -175,13 +175,19 @@ public class Tienda implements Serializable{
 	}
 	
 
-	public Tienda(String nit, Persona dueño, String nombre, double saldo, String estado) {	
+	public Tienda(String nit, Administrador dueño, String nombre, double saldo, String estado) {	
 		this(nombre);
 		this.nit = nit;
 		this.dueño = dueño;
 		this.saldo = saldo;
 		this.estado = estado;
+		
+		if(dueño!= null){
+			dueño.getTiendas().add(this);
 
+		}
+		
+		
 	}
 
 //------------------------------------------------------------------------------------------------------------

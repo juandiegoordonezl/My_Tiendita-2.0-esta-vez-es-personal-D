@@ -19,7 +19,8 @@ public class Cajero extends Empleado implements Serializable{
 			boolean prestacionSalud, boolean prestacionPension,int experiencia,Caja caja) {
 		super(nombre, id, edad, genero, liquidacion, tienda, prestacionSalud, prestacionPension,TipoEmpleado.CAJERO,experiencia);
 		this.setCaja(caja);
-		Tienda.getDesempleados().add(this);
+		tienda.getEmpleados().add(this);
+		caja.setCajero(this);
 		// TODO Auto-generated constructor stub
 	}
 

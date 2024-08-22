@@ -321,10 +321,10 @@ public class Producto implements Serializable,Cloneable {
         return productosAdecuados;
     }
 
-//    @Override
-//    public String toString() {
-//        return nombre + "\t" + marca + "\t" + tamaño + "\t" + precio;
-//    }
+@Override
+ public String toString() {
+      return nombre + "\t" + marca + "\t" + tamaño + "\t" + precio;
+ }
 	
 //-------------------------------------------------------------------------------------------------------------
 }

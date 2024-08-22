@@ -26,10 +26,11 @@ import java.util.HashSet;
 public class Funcionalidad4 extends Identidad implements Cloneable {
 	
 	static Scanner sc = new Scanner(System.in);
-	static Administrador usuario =(Administrador) identificarPersona();
+	
 	
 	static Tienda tiendaSelecta = null;
 	    public  static void seleccionTienda() {
+	    Administrador usuario =(Administrador) identificarPersona();
 	    	
 	    	System.out.println("------------------ REVISION DE TIENDA -----------------");
 	// seleccion de tiendas para administrar //  
@@ -440,7 +441,7 @@ public class Funcionalidad4 extends Identidad implements Cloneable {
 	                     System.out.println("Selección inválida.");
 	                 }
 
-	                 sc.close();
+	                 
 	                 	System.out.println("Seleccione una opcion");
 		                System.out.println("1.Seleccionar otra tienda");
 		                System.out.println("2. Volver a menu principal");

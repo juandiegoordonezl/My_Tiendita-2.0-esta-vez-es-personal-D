@@ -99,7 +99,7 @@ public class Cliente extends Persona implements Serializable {
 	
 	public Cliente(String nombre, int id, int edad, Genero genero1) {
 		super(nombre, id, edad, genero1);
-		super.getPersonas().add(this);
+		//super.getPersonas().add(this);
 	}
 	
 	
