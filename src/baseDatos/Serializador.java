@@ -45,7 +45,7 @@ public class Serializador {
 		serializar(Tienda.getTiendas(),"tiendas");
 		serializar(Tienda.getDesempleados(),"empleados");
 		serializar(Proveedor.getSeisProveedores(),"proveedores");
-		serializar(Persona.getPersonas(),"clientes");
+		serializar(Persona.getPersonas(),"personas");
 		}
 	public static void main(String[] args){
 //		Deserializador.deserializarListas();

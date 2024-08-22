@@ -46,6 +46,6 @@ public class Deserializador {
 		deserializar(Tienda.getTiendas(),"tiendas");
 		deserializar(Tienda.getDesempleados(),"empleados");
 		deserializar(Proveedor.getSeisProveedores(),"proveedores");
-		deserializar(Persona.getPersonas(),"clientes");
+		deserializar(Persona.getPersonas(),"personas");
 		}
 }
