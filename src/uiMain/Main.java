@@ -1,4 +1,5 @@
 package uiMain;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -61,6 +62,111 @@ public class Main extends Identidad{
 	static int [] numeros = {1,2,3,4,5,6};
 	static int decision;
 //-----------------------------------------------------------------------------------------------------------
+	public static void generarPasillosYProductos() {
+	    ArrayList<Tienda> tiendas = Tienda.getTiendas();
+
+	    for (int i = 0; i < tiendas.size(); i++) {
+	        Tienda tienda = tiendas.get(i);
+	        
+	        // Crear pasillos con productos para cada tienda
+	        switch (i) {
+	            case 0: // Tienda 1
+	                crearPasilloConProductos(tienda, "Pasillo Alimentos", Categoria.ALIMENTO, generarProductosAlimentos());
+	                crearPasilloConProductos(tienda, "Pasillo Bebidas", Categoria.BEBIDA, generarProductosBebidas());
+	                break;
+	                
+	            case 1: // Tienda 2
+	                crearPasilloConProductos(tienda, "Pasillo Limpieza", Categoria.LIMPIEZA, generarProductosLimpieza());
+	                crearPasilloConProductos(tienda, "Pasillo Personal", Categoria.PERSONAL, generarProductosPersonal());
+	                break;
+	                
+	            case 2: // Tienda 3
+	                crearPasilloConProductos(tienda, "Pasillo Hogar", Categoria.HOGAR, generarProductosHogar());
+	                crearPasilloConProductos(tienda, "Pasillo Electrónico", Categoria.ELECTRONICO, generarProductosElectronicos());
+	                break;
+	                
+	            case 3: // Tienda 4
+	                crearPasilloConProductos(tienda, "Pasillo Alimentos", Categoria.ALIMENTO, generarProductosAlimentos());
+	                crearPasilloConProductos(tienda, "Pasillo Hogar", Categoria.HOGAR, generarProductosHogar());
+	                break;
+	                
+	            case 4: // Tienda 5
+	                crearPasilloConProductos(tienda, "Pasillo Bebidas", Categoria.BEBIDA, generarProductosBebidas());
+	                crearPasilloConProductos(tienda, "Pasillo Electrónico", Categoria.ELECTRONICO, generarProductosElectronicos());
+	                break;
+	                
+	            case 5: // Tienda 6
+	                crearPasilloConProductos(tienda, "Pasillo Limpieza", Categoria.LIMPIEZA, generarProductosLimpieza());
+	                crearPasilloConProductos(tienda, "Pasillo Personal", Categoria.PERSONAL, generarProductosPersonal());
+	                break;
+	                
+	            case 6: // Tienda 7
+	                crearPasilloConProductos(tienda, "Pasillo Alimentos", Categoria.ALIMENTO, generarProductosAlimentos());
+	                crearPasilloConProductos(tienda, "Pasillo Bebidas", Categoria.BEBIDA, generarProductosBebidas());
+	                break;
+	                
+	            case 7: // Tienda 8
+	                crearPasilloConProductos(tienda, "Pasillo Hogar", Categoria.HOGAR, generarProductosHogar());
+	                crearPasilloConProductos(tienda, "Pasillo Electrónico", Categoria.ELECTRONICO, generarProductosElectronicos());
+	                break;
+	        }
+	}
+	}
+
+	// Método para crear un pasillo y asignarlo a una tienda
+	public static void crearPasilloConProductos(Tienda tienda, String nombrePasillo, Categoria categoria, ArrayList<Producto> productos) {
+	    Pasillo pasillo = new Pasillo(nombrePasillo, productos, categoria, tienda);
+	    tienda.getPasillos().add(pasillo);
+	    for (Producto producto : productos) {
+	        producto.setPasillo(pasillo);
+	        producto.setTienda(tienda);
+	    }
+	}
+
+	// Métodos para generar productos de diferentes categorías
+	public static ArrayList<Producto> generarProductosAlimentos() {
+	    ArrayList<Producto> productos = new ArrayList<>();
+	    productos.add(new Producto("Arroz", "Diana", 5000, Tamaño.GRANDE, Edades.ADULTOS, 1, Categoria.ALIMENTO, "Arroz blanco", LocalDate.of(2025, 8, 1)));
+	    productos.add(new Producto("Frijoles", "La Fama", 4500, Tamaño.MEDIANO, Edades.ADULTOS, 2, Categoria.ALIMENTO, "Frijoles rojos", LocalDate.of(2024, 12, 1)));
+	    return productos;
+	}
+
+	public static ArrayList<Producto> generarProductosBebidas() {
+	    ArrayList<Producto> productos = new ArrayList<>();
+	    productos.add(new Producto("Coca-Cola", "Coca-Cola", 3000, Tamaño.PEQUEÑO, Edades.MENORES, 3, Categoria.BEBIDA, "Bebida gaseosa", LocalDate.of(2024, 6, 1)));
+	    productos.add(new Producto("Agua", "Postobón", 2000, Tamaño.MEDIANO, Edades.ADULTOS, 4, Categoria.BEBIDA, "Agua sin gas", LocalDate.of(2025, 1, 1)));
+	    return productos;
+	}
+
+	public static ArrayList<Producto> generarProductosLimpieza() {
+	    ArrayList<Producto> productos = new ArrayList<>();
+	    productos.add(new Producto("Jabón en polvo", "Ariel", 15000, Tamaño.GRANDE, Edades.ADULTOS, 5, Categoria.LIMPIEZA, "Detergente para ropa", LocalDate.of(2026, 5, 1)));
+	    productos.add(new Producto("Desinfectante", "Lysol", 8000, Tamaño.MEDIANO, Edades.ADULTOS, 6, Categoria.LIMPIEZA, "Limpia superficies", LocalDate.of(2025, 3, 1)));
+	    return productos;
+	}
+
+	public static ArrayList<Producto> generarProductosPersonal() {
+	    ArrayList<Producto> productos = new ArrayList<>();
+	    productos.add(new Producto("Shampoo", "Head & Shoulders", 12000, Tamaño.GRANDE, Edades.ADULTOS, 7, Categoria.PERSONAL, "Shampoo anticaspa", LocalDate.of(2026, 11, 1)));
+	    productos.add(new Producto("Jabón de baño", "Dove", 4000, Tamaño.PEQUEÑO, Edades.MENORES, 8, Categoria.PERSONAL, "Jabón en barra", LocalDate.of(2025, 8, 1)));
+	    return productos;
+	}
+
+	public static ArrayList<Producto> generarProductosHogar() {
+	    ArrayList<Producto> productos = new ArrayList<>();
+	    productos.add(new Producto("Sartén", "Imusa", 25000, Tamaño.MEDIANO, Edades.ADULTOS, 9, Categoria.HOGAR, "Sartén antiadherente", LocalDate.of(2027, 2, 1)));
+	    productos.add(new Producto("Tostadora", "Oster", 90000, Tamaño.GRANDE, Edades.ADULTOS, 10, Categoria.HOGAR, "Tostadora de pan", LocalDate.of(2028, 12, 1)));
+	    return productos;
+	}
+
+	public static ArrayList<Producto> generarProductosElectronicos() {
+	    ArrayList<Producto> productos = new ArrayList<>();
+	    productos.add(new Producto("Televisor", "Samsung", 1500000, Tamaño.GRANDE, Edades.ADULTOS, 11, Categoria.ELECTRONICO, "Televisor LED 50\"", LocalDate.of(2030, 12, 1)));
+	    productos.add(new Producto("Celular", "Xiaomi", 800000, Tamaño.MEDIANO, Edades.ADULTOS, 12, Categoria.ELECTRONICO, "Celular inteligente", LocalDate.of(2029, 8, 1)));
+	    return productos;
+	}
+	
+	
 	public static void main(String[] args){
 		Deserializador.deserializarListas();
 //	/*	System.out.println(Tienda.getTiendas());
@@ -533,6 +639,12 @@ public class Main extends Identidad{
 		           new Pasillo(),
 		           new Pasillo())));
 			}
+		
+		// Crear productos únicos para cada pasillo y tienda
+		
+
+		
+		
 //		for(int i=0;i>8;i++) {
 //			Tienda.getTiendas().get(0).set(((ArrayList<Pasillo>) List.of(
 //		           new Pasillo(),
@@ -545,8 +657,8 @@ public class Main extends Identidad{
 		
 		
 	Serializador.serializarTodo();	
-//	escogerFuncionalidad();
-	}
+
+}
 	
 	public static void escogerFuncionalidad() {
 		do{

@@ -156,6 +156,18 @@ public class Producto implements Serializable,Cloneable {
 	}
 
 	//Constructores------------------------------------------------------------------------------------------------
+	public Producto(String nombre, String marca, double precio, Tamaño tamaño, Edades edadValida, int id, Categoria categoria, String descripcion, LocalDate fechaPerecer) {
+	    this.nombre = nombre;
+	    this.marca = marca;
+	    this.precio = precio;
+	    this.tamaño = tamaño;
+	    this.edadValida = edadValida;
+	    this.id = id;
+	    this.categoria = categoria;
+	    this.descripcion = descripcion;
+	    this.fechaPerecer = fechaPerecer;
+	}
+	
 	public Producto(String nombre,Categoria categoria,Pasillo pasillo) {
 		this.categoria = categoria;
 		this.nombre= nombre;
