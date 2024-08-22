@@ -239,6 +239,10 @@ public class Producto implements Serializable,Cloneable {
         this.id = id;
 	}
 
+	public Producto() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public Producto clone() {
         try {
@@ -317,10 +321,10 @@ public class Producto implements Serializable,Cloneable {
         return productosAdecuados;
     }
 
-    @Override
-    public String toString() {
-        return nombre + "\t" + marca + "\t" + tamaño + "\t" + precio;
-    }
+//    @Override
+//    public String toString() {
+//        return nombre + "\t" + marca + "\t" + tamaño + "\t" + precio;
+//    }
 	
 //-------------------------------------------------------------------------------------------------------------
 }

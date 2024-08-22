@@ -687,8 +687,8 @@ public class Tienda implements Serializable{
 
 //------------------------------------------------------------------------------------------------------------
 		@Override
-		public final String toString() {
-			return this.getNombre(); 
+		public String toString() {
+			return ""+this.getPasillos(); 
 		}
 //------------------------------------------------------------------------------------------------------------
 		public static Cajero encontrarCajero(List<Empleado> empleados) {

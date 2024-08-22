@@ -82,9 +82,13 @@ public class Proveedor implements Serializable{
 	
 //Metodos------------------------------------------------------------------------------------------------------
 	
-	public String toString(){
-		return this.nombre+" con categoria: "+(this.tipo+"").toLowerCase();
+	public Proveedor() {
+		// TODO Auto-generated constructor stub
 	}
+
+//	public String toString(){
+//		return this.nombre+" con categoria: "+(this.tipo+"").toLowerCase();
+//	}
 
 // Metodo scanner y print -----------------------------------------------------------------------------------------
 
